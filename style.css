@@ -45,12 +45,14 @@
     border-radius: 50px;
 }
 
-#input{
+input{
     width: 450px;
     margin-right: 5px;
+    padding : 6px;
+    border-radius: 8px;
 }
 
-#button{
+button{
     border:none;
 	padding:6px 0 6px 0;
 	border-radius:8px;
