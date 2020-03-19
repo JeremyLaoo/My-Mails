@@ -3,7 +3,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: #dcedc1;
+    background-image: url("/ae3e209e5c9502e136fb238b196a3eb2.jpg");
     
 }
 
@@ -43,4 +43,19 @@
     margin-right: 20px ;
     margin-left: 20px;
     border-radius: 50px;
+}
+
+#input{
+    width: 450px;
+    margin-right: 5px;
+}
+
+#button{
+    border:none;
+	padding:6px 0 6px 0;
+	border-radius:8px;
+	background:#d34836;
+	font:bold 13px Arial;
+    color:#fff;
+    width:50px
 }
