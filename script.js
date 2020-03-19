@@ -1,30 +1,30 @@
 // getElementByTagName permet d'accéder au texte 
-var messagesCount = document.getElementsByTagName('p').length
+var messagesCount = $('p').length
 
 console.log('messagesCount :', messagesCount);
 // Le console.log va s'afficher sur la console du navigateur 
 
 // Le .textContent permet de modifier le texte sur lequel on accede ici "count"
-document.getElementById('count').textContent = messagesCount;
+$('#count').text(messagesCount);
 
-for(var i=0; i<document.getElementsByClassName('trash').length; i++){
+// for(var i=0; i<$('.trash').length; i++){
 // Mécanique qui permet de capter le click sur le picto 'trash'
-document.getElementsByClassName('trash')[i].addEventListener("click",
+$('.trash').click(
  function(){
   console.log("clic détecté !");
   this.parentNode.remove()
-  var messagesCount = document.getElementsByTagName('p').length
-  document.getElementById('count').textContent = messagesCount;
+  var messagesCount = $('p').length
+  $('#count').text(messagesCount);
  }
 );
-}
+// }
 // On capte le Click, on supprime l'élément parent de la cible, ici la poubelle donc parent = la div et on recompte dans la fonction pour mettre à jour le compteur
 
-document.getElementById('button').addEventListener("click",
+$('#button').click(
  function(){
   console.log("clic détecté !");
 //   .value recupère la valeur du champs input
-  var newMessage = document.getElementById('input').value
+  var newMessage = $('#input').value
   console.log('newMessage :', newMessage);
 
   var newDiv = document.createElement('div');
@@ -55,7 +55,7 @@ document.getElementById('button').addEventListener("click",
   newDiv.appendChild(trashPicto);
 
   var messagesCount = document.getElementsByTagName('p').length
-  document.getElementById('count').textContent = messagesCount;
+  $('#count').text(messagesCount);
 
   document.getElementById('input').value = "";
 
@@ -64,7 +64,7 @@ document.getElementById('button').addEventListener("click",
         console.log("click ok")
         this.parentNode.remove();
         var messagesCount = document.getElementsByTagName('p').length
-        document.getElementById('count').textContent = messagesCount;
+        $('#count').text(messagesCount);
   })
   
  }
