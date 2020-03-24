@@ -26,6 +26,8 @@ $('.button').click(
 //   .value recupère la valeur du champs input
   var newMessage = $('.input').val();
   console.log('Message from Add :', newMessage);
+
+  $(".input").val("");
   
 // Ecriture JQuery pour simplifier JS 
 $("body").append(`
@@ -76,9 +78,6 @@ $("body").append(`
   var messagesCount = document.getElementsByTagName('p').length
   $('#count').text(messagesCount);
 
-  
-
-  $('.input').val();
 
   $('.trash').click(
   function(){
@@ -104,10 +103,16 @@ $('#search').click(
       $('h4').each(function(){
         if($("#searchMsg").val() != $(this).text() ){  
           $(this).parent().parent().fadeOut();
+          var msgAfterFilter = $('p').length
+          $('#count').text(msgAfterFilter);
        } else {
         $(this).parent().parent().show();
        }
      })
+
+     $("#searchMsg").val("");
+
+     
 
   
         
